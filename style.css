@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("img/backgorundBody.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    margin-top: 1%;
+    width: 100%;
+}
+main {
+    width: 80%;
+    position: relative;
+    left: 50%;
+    margin-left: -40%;
+    overflow: hidden;
+}
+#gameBoard {
+    width: 70%;
+    background-color: whitesmoke;
+    overflow: hidden;
+    display: none;
+}
+#gameBoard div  {
+    border: 2px solid darkgray;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    float: left;
+}
+section {
+    float: left;
+    min-width: 25%;
+    margin-top: 15px;
+    padding: 7px;
+    border: 2px solid darkgray;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    float: left;
+    margin-left: 25px;
+}
+table {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+tr, th, td {
+    border: 1px solid black;
+    padding: 5px 25px 5px 25px;
+}
+p {
+    width: 100px;
+}
+button, #start {
+    padding: 5px 10px 5px 10px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    width: 65px;
+}
+button:hover, #start:hover {
+    background-color: silver;
+}
+fieldset:first-of-type {
+    overflow: hidden;
+    width: 100%;
+}
+#timer {
+    width: 80px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: xx-large;
+    text-align: center;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    float: right;
+    display: none;
+}
+fieldset {
+    background-color: whitesmoke;
+    padding: 2%;
+    margin-top: 1%;
+    border: 10px double black;
+    border-radius: 15px;
+}
+
+input, label {
+    margin-left: 10px;
+}
+
+.holder {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+.holder img {
+    width: 100%;
+    height: 100%;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease;
+}
+
+.holder .front {
+    transform: rotateY(180deg);
+}
+
+.holder .back {
+    transform: rotateY(0deg);
+}
+
+.holder.revealed {
+    transform: rotateY(180deg);
+}
+
+/* Za telefon nije dobro results polje */
+@media only screen and (max-width: 600px) { 
+    body {
+        background-image: none;
+        background-color: rgb(30,30,30);
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
+    section  {
+        float: none;
+    }
+}

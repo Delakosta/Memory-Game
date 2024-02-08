@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <form>
+            <fieldset>
+                <label for="user">Enter Username: </label><input type="text" id="user">
+                <input type="button" id="start" value="Start">
+                <div id="timer">0</div>
+            </fieldset>
+            <fieldset>
+                <label>Select difficulty: </label>
+                <input type="radio" name="diff" value="easy" id="easy" checked><label for="easy">Easy</label>
+                <input type="radio" name="diff" value="normal" id="normal"><label for="normal">Normal</label>
+                <input type="radio" name="diff" value="hard" id="hard"><label for="hard">Hard</label>
+                <input type="radio" name="diff" value="expert" id="expert"><label for="expert">Expert</label>
+            </fieldset>
+        </form>
+        <section id="gameBoard"></section>
+        <section id="resultSection">
+            <div id="buttons">
+                <button type="button" id="btnEasy">Easy</button>
+                <button type="button" id="btnNormal">Normal</button>
+                <button type="button" id="btnHard">Hard</button>
+                <button type="button" id="btnExpert">Expert</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Place</th>
+                        <th>Username</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody id="resultBoard"></tbody>
+            </table>
+        </section>
+    </main>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
